@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.joelmaciel</groupId>
 	<artifactId>ApiGateway</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>ApiGateway</name>
 	<description>Api Gateway Microservices</description>
 	<properties>
@@ -114,6 +114,20 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.4.0</version>
+				<configuration>
+					<from>
+						<image>openjdk:11</image>
+					</from>
+					<to>
+						<image>registry.hub.docker.com/joel37/apigateway</image>
+						<tags>${project.version}</tags>
+					</to>
 				</configuration>
 			</plugin>
 		</plugins>
